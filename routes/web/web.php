@@ -20,5 +20,9 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::middleware('auth')->group(function(){
     Route::get('/admin', 'AdminsController@index')->name('admin.index');
+    Route::any('/ckfinder/connector', '\CKSource\CKFinderBridge\Controller\CKFinderController@requestAction')
+    ->name('ckfinder_connector');
 
+Route::any('/ckfinder/browser', '\CKSource\CKFinderBridge\Controller\CKFinderController@browserAction')
+    ->name('ckfinder_browser');
 });

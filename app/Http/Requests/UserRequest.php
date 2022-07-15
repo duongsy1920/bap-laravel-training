@@ -34,7 +34,7 @@ class UserRequest extends FormRequest
                 'email' => 'required|unique:users,email',
                 'username'=> 'required|string|max:255|alpha_dash|unique:users,username',
                 'name'=> 'required|string|max:255',
-                'avatar'=> 'file',
+                'avatar'=> 'file|mimes:jpeg,png,jpg,gif,svg',
             ];
 
         }
@@ -47,7 +47,7 @@ class UserRequest extends FormRequest
                 'email' => 'required|unique:users,email,' .$this->id. ',id',
                 'username'=> 'required|string|max:255|alpha_dash|unique:users,username',
                 'name'=> 'required|string|max:255',
-                'avatar'=> 'file',
+                'avatar'=> 'file|mimes:jpeg,png,jpg,gif,svg',
             ];
         }
         

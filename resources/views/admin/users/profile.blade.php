@@ -14,7 +14,8 @@
                             <img class="img-profile rounded-circle" style="height:100px" src="{{$user->avatar}}">
                     </div>
                     <div class="form-group">
-                            <input type="file" name="avatar">
+                            <label for="avatar">Avatar</label>
+                            <input type="file" name="avatar" class="form-control-file @error('avatar') is-invalid @enderror">
                             @error('avatar')
                             <div class="invalid-feedback">{{$message}}</div>
                             @enderror

@@ -28,7 +28,7 @@ class PostController extends Controller
         $this->authorize('create', Post::class);
         $inputs = request()->validate([
             'title' => 'required|min:8|max:255',
-            'post_image' => 'file',
+            'post_image' => 'file|mimes:jpeg,png,jpg,gif,svg',
             'body' => 'required',
         ]);
         if(request('post_image')){
@@ -56,7 +56,7 @@ class PostController extends Controller
 
         $inputs = request()->validate([
             'title'=> 'required|min:8|max:255',
-            'post_image'=> 'file',
+            'post_image'=> 'file|mimes:jpeg,png,jpg,gif,svg',
             'body'=> 'required'
         ]);
 

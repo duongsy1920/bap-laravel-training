@@ -6,7 +6,11 @@
             <form method="post" action="{{route('users.store')}}" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                            <input type="file" name="avatar">
+                            <label for="avatar">Avatar</label>
+                            <input type="file" name="avatar" class="form-control-file @error('avatar') is-invalid @enderror">
+                            @error('avatar')
+                            <div class="invalid-feedback">{{$message}}</div>
+                            @enderror
                     </div>
                     <div class="form-group">
                         <label for="username">Username</label>

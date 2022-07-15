@@ -41,7 +41,8 @@
                                 <th>Id</th>
                                 <th>Name</th>
                                 <th>Slug</th>
-                                <th>Delete</th>
+                                <th>Attach</th>
+                                <th>Detach</th>
                             </tr>
                             </thead>
                             <tbody>
