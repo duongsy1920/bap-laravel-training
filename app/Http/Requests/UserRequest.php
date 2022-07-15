@@ -45,7 +45,7 @@ class UserRequest extends FormRequest
             }
             $rules += [
                 'email' => 'required|unique:users,email,' .$this->id. ',id',
-                'username'=> 'required|string|max:255|alpha_dash|unique:users,username',
+                'username'=> 'required|string|max:255|alpha_dash|unique:users,username,' .$this->id. ',id',
                 'name'=> 'required|string|max:255',
                 'avatar'=> 'file|mimes:jpeg,png,jpg,gif,svg',
             ];
